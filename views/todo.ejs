@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<h1>Todo</h1>
+	<% include nav.ejs %>
+	
+	<div id='todo'>
+		<input type='text' placeholder="enter new item ..." id='input_item'>
+		<button id='btn_item'>submit</button>
+		<ul id='ul_items'>
+		<% for(var i in items){ %>
+			<li id='li_items'><%= items[i].item %><button id='btn_delete'>delete</button></li>
+		<% } %>
+		</ul>
+	</div>
+
+	<script src='todo.js'></script>	
+</body>
+</html>
